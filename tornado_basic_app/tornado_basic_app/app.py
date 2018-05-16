@@ -1,10 +1,13 @@
 import tornado.ioloop
 import tornado.web
 
+
 # route to index channel
+
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render('templates/home.html')
+
 # self.write("Hello, world")
 
 # r"/" == root website address
@@ -18,6 +21,7 @@ def make_app():
 
 
 # start the server as a port
+
 if __name__ == "__main__":
     app = make_app()
     PortNumber = str(8888)
